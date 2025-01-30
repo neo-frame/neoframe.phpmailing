@@ -33,6 +33,7 @@ export function Contact() {
   const [formErrors, setFormErrors] = React.useState({
     message: ''
   });
+  const [submitError, setSubmitError] = React.useState('');
 
   React.useEffect(() => {
     const handleLoaderDone = () => {
@@ -95,6 +96,7 @@ export function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSubmitError('');
 
     if (isFormValid && !isSubmitting) {
       setIsSubmitting(true);
@@ -103,14 +105,14 @@ export function Contact() {
         const form = e.target as HTMLFormElement;
         const formData = new FormData(form);
 
-        const response = await fetch('https://neoframe.ch/contact.php', {
+        const response = await fetch('https://steelblue-aardvark-715739.hostingersite.com/contact.php', {
           method: 'POST',
           body: formData,
         });
 
-        const text = await response.text();
+        const result = await response.json();
 
-        if (text === "success") {
+        if (result.status === "success") {
           setIsSubmitted(true);
           setShowSuccessPopup(true);
           document.body.style.overflow = "hidden";
@@ -126,14 +128,12 @@ export function Contact() {
             antiRobot: false,
             termsAccepted: false
           });
-        } else if (text === "invalid") {
-          alert("Ungültige Eingabe. Bitte überprüfen Sie Ihre Angaben.");
         } else {
-          throw new Error('Form submission failed');
+          setSubmitError(result.message || 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.');
         }
       } catch (error) {
         console.error("Form submission error:", error);
-        alert("Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.");
+        setSubmitError('Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.');
       } finally {
         setIsSubmitting(false);
       }
@@ -265,6 +265,12 @@ export function Contact() {
               <h2 className="text-2xl font-bold mb-8 text-white">
                 {isSubmitted ? 'Ihre Nachricht wurde gesendet' : 'Kontaktieren Sie uns'}
               </h2>
+
+              {submitError && (
+                <div className="mb-6 p-4 bg-red-500/10 border border-red-500/20 rounded-xl text-red-400">
+                  {submitError}
+                </div>
+              )}
 
               <form 
                 action="contact.php"
