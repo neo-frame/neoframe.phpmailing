@@ -105,7 +105,7 @@ export function Contact() {
         const form = e.target as HTMLFormElement;
         const formData = new FormData(form);
 
-        const response = await fetch('https://steelblue-aardvark-715739.hostingersite.com/contact.php', {
+        const response = await fetch('https://neoframe.ch/contact.php', {
           method: 'POST',
           body: formData,
         });

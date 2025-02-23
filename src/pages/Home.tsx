@@ -149,6 +149,12 @@ export function Home() {
       logo: "https://res.cloudinary.com/dcmug2qjf/image/upload/v1737677258/Zweir%C3%A4der_logo_schwarz__1_-1-removebg-preview_yr8xsy.png",
       alt: "2raeder.ch logo",
       size: "h-[120px]"
+    },
+    {
+      name: "spitex-mobility.ch",
+      logo: "https://res.cloudinary.com/dcmug2qjf/image/upload/v1740278899/white_logo_transparent_jej6dh.png",
+      alt: "Spitex Mobility logo",
+      size: "h-[65px]"
     }
   ];
 
