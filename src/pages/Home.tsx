@@ -122,25 +122,25 @@ export function Home() {
   const partners = [
     {
       name: "bodyguardservices.ch",
-      logo: "https://assets.zyrosite.com/Y4LVR5rb89cBJW67/bgs-logo-m2WajD9lg5UnEOQD.png",
+      logo: "https://res.cloudinary.com/dcmug2qjf/image/upload/v1741274177/bgs-logo-m2WajD9lg5UnEOQD_lloyvz.avif",
       alt: "bodyguardservices.ch logo",
       size: "h-20"
     },
     {
       name: "exaktrent.ch",
-      logo: "https://assets.zyrosite.com/Y4LVR5rb89cBJW67/exakt_rent_white_logo_transparent-AoPqlrjOvaS2LG1O.png",
+      logo: "https://res.cloudinary.com/dcmug2qjf/image/upload/v1741274402/exakt_rent_white_logo_transparent-AoPqlrjOvaS2LG1O_w27pwg_c_crop_ar_4_3_bajb26.avif",
       alt: "exaktrent.ch logo",
       size: "h-[150px]"
     },
     {
       name: "eco-glo.ch",
-      logo: "https://assets.zyrosite.com/Y4LVR5rb89cBJW67/ecoglo_pure_white_logo_transparent-YyvZnbGyR4u5jevB.png",
+      logo: "https://res.cloudinary.com/dcmug2qjf/image/upload/v1741274148/ecoglo_pure_white_logo_transparent-YyvZnbGyR4u5jevB_qraqnz.avif",
       alt: "eco-glo.ch logo",
       size: "h-12"
     },
     {
       name: "eljammal-montageservice.ch",
-      logo: "https://assets.zyrosite.com/Y4LVR5rb89cBJW67/image-removebg-preview-6-1-d957la0GW7HOVRyl.png",
+      logo: "https://res.cloudinary.com/dcmug2qjf/image/upload/v1734654906/image-removebg-preview_9_yay0kx.png",
       alt: "eljammal-montageservice.ch logo",
       size: "h-[88px]"
     },
